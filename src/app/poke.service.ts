@@ -13,7 +13,7 @@ export class PokeService {
 	constructor(private http: Http) { }
 
 	getAllPokemon() {
-		return this.http.get('http://pokeapi.co/api/v2/pokemon/')
+		return this.http.get('https://pokeapi.co/api/v2/pokemon/')
 						.map(res => {
 							return res.json().results;
 						});
