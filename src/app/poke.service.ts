@@ -8,6 +8,7 @@ export class PokeService {
 
 	test = 'hello from the poke service';
 	selectedPokemon: any = {};
+	pokemonCollection = [];
 
 	constructor(private http: Http) { }
 
@@ -24,6 +25,29 @@ export class PokeService {
 				return res.json();
 				// return res.json().results
 			})
+	}
+
+	catchPokemon() {
+		// get the data I want
+		const sprite = this.selectedPokemon.sprites.front_default;
+		const name = this.selectedPokemon.name;
+		const order = this.selectedPokemon.order;
+		const weight = this.selectedPokemon.weight;
+		const baseExperience = this.selectedPokemon.base_experience;
+		const height = this.selectedPokemon.height;
+		
+		// create a new pokemon object
+		const newPokemon = {
+			sprite: sprite,
+			name: name,
+			order: order,
+			weight: weight,
+			baseExperience: baseExperience,
+			height: height,
+		};
+
+		// push that object into the collection
+		this.pokemonCollection.push(newPokemon);
 	}
 
 }
