@@ -8,7 +8,7 @@ import { PokeService } from '../poke.service'
 })
 export class DetailsComponent implements OnInit {
 
-	constructor(private pokeService: PokeService) { }
+	constructor(public pokeService: PokeService) { }
 
 	ngOnInit() {
 	}

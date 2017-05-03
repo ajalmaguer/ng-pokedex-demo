@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'NG Pokedex';
-	anotherVar = 'asodifjaosidjf'
 }

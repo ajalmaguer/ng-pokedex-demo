@@ -1,9 +1,5 @@
 <!-- <pre>{{pokeService.selectedPokemon | json}}</pre> -->
 
-<div class="test">
-	blah
-</div>
-
 <div class="jumbotron">
   <h1>{{pokeService.selectedPokemon.name}}</h1>
   <p *ngIf="!pokeService.selectedPokemon.sprites">
@@ -11,8 +7,7 @@
   </p>
   <p *ngIf="pokeService.selectedPokemon.sprites">
   	{{pokeService.selectedPokemon?.sprites?.front_default}}
-	<img src="{{pokeService.selectedPokemon?.sprites?.front_default}}">
-	<img [src]="pokeService.selectedPokemon?.sprites?.front_default">
+    <img [src]="pokeService.selectedPokemon?.sprites?.front_default">
   </p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  <p><button class="btn btn-primary btn-lg">Learn more</button></p>
 </div>
