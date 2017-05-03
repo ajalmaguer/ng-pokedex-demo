@@ -13,4 +13,14 @@ export class DetailsComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	getSelectedPokemonName() {
+		const name = this.pokeService.selectedPokemon.name;
+		return name ? name : 'Select a pokemon!';
+	}
+
+	getSprite() {
+		const url = this.pokeService.selectedPokemon.sprites.front_default;
+		return url ? url : '';
+	}
+
 }

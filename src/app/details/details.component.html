@@ -1,13 +1,12 @@
 <!-- <pre>{{pokeService.selectedPokemon | json}}</pre> -->
 
 <div class="jumbotron">
-  <h1>{{pokeService.selectedPokemon.name}}</h1>
-  <p *ngIf="!pokeService.selectedPokemon.sprites">
-  	Click on a pokemon
-  </p>
+  <h1>{{getSelectedPokemonName()}}</h1>
+
+  <br>
+ 
   <p *ngIf="pokeService.selectedPokemon.sprites">
-  	{{pokeService.selectedPokemon?.sprites?.front_default}}
-    <img [src]="pokeService.selectedPokemon?.sprites?.front_default">
+    
+    <img [src]="getSprite()" class="thumbnail">
   </p>
-  <p><button class="btn btn-primary btn-lg">Learn more</button></p>
 </div>
