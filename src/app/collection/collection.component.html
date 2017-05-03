@@ -1,31 +1,11 @@
 <div class="row">
-	<div class="col-sm-6 col-md-4">
-		<poke-thumbnail imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
-			<h3>venusaur</h3>
-			<p><strong>Order:</strong>1000</p>
-			<p><strong>Weight:</strong>1000</p>
-			<p><strong>Base Experience:</strong>234</p>
-			<p><strong>Height:</strong>20</p>
-			<p><poke-button btnClass="danger" icon="minus-sign">Release</poke-button></p>
-		</poke-thumbnail>
-	</div>
-	<div class="col-sm-6 col-md-4">
-		<poke-thumbnail imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
-			<h3>venusaur</h3>
-			<p><strong>Order:</strong>1000</p>
-			<p><strong>Weight:</strong>1000</p>
-			<p><strong>Base Experience:</strong>234</p>
-			<p><strong>Height:</strong>20</p>
-			<p><poke-button btnClass="danger" icon="minus-sign">Release</poke-button></p>
-		</poke-thumbnail>
-	</div>
-	<div class="col-sm-6 col-md-4">
-		<poke-thumbnail imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
-			<h3>venusaur</h3>
-			<p><strong>Order:</strong>1000</p>
-			<p><strong>Weight:</strong>1000</p>
-			<p><strong>Base Experience:</strong>234</p>
-			<p><strong>Height:</strong>20</p>
+	<div class="col-sm-6 col-md-4" *ngFor="let pokemon of pokeService.pokemonCollection">
+		<poke-thumbnail [imageUrl]="pokemon.sprite">
+			<h3>{{pokemon.name}}</h3>
+			<p><strong>Order:</strong> {{pokemon.order}}</p>
+			<p><strong>Weight:</strong> {{pokemon.weight}}</p>
+			<p><strong>Base Experience:</strong> {{pokemon.baseExperience}}</p>
+			<p><strong>Height:</strong> {{pokemon.height}}</p>
 			<p><poke-button btnClass="danger" icon="minus-sign">Release</poke-button></p>
 		</poke-thumbnail>
 	</div>

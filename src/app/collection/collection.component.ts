@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokeService } from '../poke.service';
 
 @Component({
 	selector: 'poke-collection',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionComponent implements OnInit {
 	
-	constructor() { }
+	constructor(public pokeService: PokeService) { }
 	
 	ngOnInit() {
 	}
