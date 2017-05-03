@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'poke-thumbnail',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./thumbnail.component.css']
 })
 export class ThumbnailComponent implements OnInit {
+	@Input() imageUrl: string;
 
 	constructor() { }
 

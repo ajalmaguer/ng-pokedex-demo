@@ -1,3 +1,6 @@
-<p>
-  thumbnail works!
-</p>
+<div class="thumbnail">
+	<img *ngIf="imageUrl" [src]="imageUrl" style="width: 100%;">
+	<div class="caption">
+		<ng-content></ng-content>
+	</div>
+</div>
