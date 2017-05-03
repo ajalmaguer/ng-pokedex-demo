@@ -8,12 +8,14 @@ import { PokeService } from './poke.service'
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   declarations: [ // componentes go here
     AppComponent,
     ListComponent,
-    DetailsComponent
+    DetailsComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,

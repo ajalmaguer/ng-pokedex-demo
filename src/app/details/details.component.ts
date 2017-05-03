@@ -23,4 +23,8 @@ export class DetailsComponent implements OnInit {
 		return url ? url : '';
 	}
 
+	catchMe() {
+		console.log('catch pokemon!');
+	}
+
 }
