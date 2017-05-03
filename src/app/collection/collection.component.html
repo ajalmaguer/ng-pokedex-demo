@@ -6,7 +6,7 @@
 			<p><strong>Weight:</strong> {{pokemon.weight}}</p>
 			<p><strong>Base Experience:</strong> {{pokemon.baseExperience}}</p>
 			<p><strong>Height:</strong> {{pokemon.height}}</p>
-			<p><poke-button btnClass="danger" icon="minus-sign">Release</poke-button></p>
+			<p><poke-button btnClass="danger" icon="minus-sign" (click)="releasePokemon(pokemon)">Release</poke-button></p>
 		</poke-thumbnail>
 	</div>
 </div>

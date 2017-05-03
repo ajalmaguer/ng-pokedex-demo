@@ -50,6 +50,14 @@ export class PokeService {
 		this.pokemonCollection.push(newPokemon);
 	}
 
+	releasePokemon(pokemon) {
+		// find index of pokemon
+		const index = this.pokemonCollection.indexOf(pokemon);
+
+		// remove from that collection
+		this.pokemonCollection.splice(index, 1);
+	}
+
 }
 
 interface Pokemon {

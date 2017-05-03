@@ -12,5 +12,10 @@ export class CollectionComponent implements OnInit {
 	
 	ngOnInit() {
 	}
+
+	releasePokemon(pokemon) {
+		console.log('remove ', pokemon)
+		this.pokeService.releasePokemon(pokemon);
+	}
 	
 }
