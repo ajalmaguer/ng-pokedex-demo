@@ -24,9 +24,7 @@ export class DetailsComponent implements OnInit {
 	}
 
 	catchMe() {
-		console.log('catch pokemon!');
 		this.pokeService.catchPokemon();
-		console.log('this.pokeService.pokemonCollection = ', this.pokeService.pokemonCollection);
 	}
 
 }

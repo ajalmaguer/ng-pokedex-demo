@@ -14,7 +14,6 @@ export class CollectionComponent implements OnInit {
 	}
 
 	releasePokemon(pokemon) {
-		console.log('remove ', pokemon)
 		this.pokeService.releasePokemon(pokemon);
 	}
 	
